@@ -713,7 +713,7 @@
         if (this.isClientOnline(row.email)) return '{{ i18n "online" }}';
         const ts = this.getLastOnline(row.email);
         if (!ts) return '{{ i18n "pages.clients.summaryNever" }}';
-        return IntlUtil.formatRelativeTime(ts);
+        return IntlUtil.formatDate(ts);
       },
       toggleDensity() {
         this.density = this.density === 'compact' ? 'comfortable' : 'compact';
